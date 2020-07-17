@@ -7,11 +7,18 @@ module.exports = {
   addProjects,
   addResources,
   addTasks,
+  findProjectById
 }
 
 //GET list of Projects
 function findProjects() {
   return db("projects")
+};
+
+//GET project by ID
+//Get by ID Done
+function findProjectById(id) {
+  return db("projects").where({ id }).first();
 };
 
 //GET list of Resources
