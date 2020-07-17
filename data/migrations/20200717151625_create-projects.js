@@ -20,7 +20,6 @@ exports.up = function(knex) {
       tbl.text('notes')//optional notes
       tbl.integer('project_id')//project id that is auto incremented foreign key
         .unsigned()
-        .notNullable()
         .references("id")
         .inTable('projects')//never negative.required.id from projects table
       tbl.boolean('completed').notNullable().defaultTo(false);//required completed table boolean set to false by default 
