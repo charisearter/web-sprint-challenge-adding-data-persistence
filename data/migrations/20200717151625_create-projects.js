@@ -23,8 +23,6 @@ exports.up = function(knex) {
         .notNullable()
         .references("id")
         .inTable('projects')//never negative.required.id from projects table
-        .onUpdate('CASCADE')//if project id updates the children of it should too
-        .onDelete('CASCADE')//if project id is deleted the tasks should too
       tbl.boolean('completed').notNullable().defaultTo(false);//required completed table boolean set to false by default 
     })
 };
