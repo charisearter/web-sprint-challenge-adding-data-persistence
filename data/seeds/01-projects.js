@@ -1,13 +1,15 @@
 
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('table_name').del()
+  //truncate instead of del (delete) to reset primary key each time
+  return knex('projects').truncate()
     .then(function () {
       // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
+      return knex('projects').insert([
+        {name: 'Project 1', description:'something here'},
+        {name: 'Project 2'}, //description optional testing
+        {name: 'Project 3', description:'some other description'},
+
       ]);
     });
 };
