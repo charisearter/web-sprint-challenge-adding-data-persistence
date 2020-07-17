@@ -89,7 +89,7 @@ Your finished project must include all of the following requirements:
   - [ ] adding projects. (addProjects)
   - [x] retrieving a list of projects. (getProjects)
   - [ ] adding tasks.(addTasks)
-  - [ ] retrieving a list of tasks. (getTasks) 
+  - [x] retrieving a list of tasks. (getTasks) 
         **The list of tasks should include the project name and project description**.
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
