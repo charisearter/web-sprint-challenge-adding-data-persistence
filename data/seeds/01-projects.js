@@ -9,7 +9,6 @@ exports.seed = function(knex) {
         {name: 'Project 1', description:'something here'},
         {name: 'Project 2'}, //description optional testing
         {name: 'Project 3', description:'some other description'},
-
       ]);
     });
 };
