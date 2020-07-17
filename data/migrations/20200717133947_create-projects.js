@@ -12,14 +12,19 @@ exports.up = function(knex) {
       tbl.text('name', 255).unique().notNullable(); //required name that is unique
       tbl.text('description', 255)// optional description
       tbl.integer('project_id')//project id that is auto incremented foreign key
-        .unsigned().notNullable().references(projects.id)//never negative.required.id from projects table
+        .unsigned().notNullable().references("id").inTable('projects');//never negative.required.id from projects table
     })
     .createTable('tasks', tbl => {
       tbl.increments(); //auto id
       tbl.text('description', 255).notNullable() //required description
       tbl.text('notes')//optional notes
       tbl.integer('project_id')//project id that is auto incremented foreign key
-        .unsigned().notNullable().references(projects.id)//never negative.required.id from projects table
+        .unsigned()
+        .notNullable()
+        .references("id")
+        .inTable('projects')//never negative.required.id from projects table
+        .onUpdate('CASCADE')//if project id updates the children of it should too
+        .onDelete('CASCADE')//if project id is deleted the tasks should too
       tbl.boolean('completed').notNullable().defaultTo(false);//required completed table boolean set to false by default 
     })
 };
