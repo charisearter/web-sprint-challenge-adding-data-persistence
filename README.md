@@ -71,10 +71,12 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 Your finished project must include all of the following requirements:
 
-- [ ] Design the data model and use _knex migrations_ to create the database and tables needed to satisfy the following business rules:
-  - [ ] a `project` can have multiple `tasks`.
-  - [ ] a `task` belongs to only one `project`.
-  - [ ] a `project` can use multiple `resources`. Example of `resources` are: computer, conference room, microphone, delivery van.
+- [x] Design the data model and use _knex migrations_ to create the database and tables needed to satisfy the following business rules:
+  - [x] a `project` can have multiple `tasks`.
+  - [x] a `task` belongs to only one `project`.
+  - [x] a `project` can use multiple `resources`. Example of `resources` are: computer, conference room, microphone, delivery van.
+
+   \\Can check when testing POST and GET REQUESTS \\
   - [ ] the same `resource` can be used in multiple `projects`.
   - [ ] when adding `projects` the client must provide a name, the description is optional.
   - [ ] when adding `resources` the client must provide a name, the description is optional.
