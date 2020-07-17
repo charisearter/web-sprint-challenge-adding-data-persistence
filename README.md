@@ -87,7 +87,7 @@ Your finished project must include all of the following requirements:
   - [ ] adding resources. (addResources)
   - [ ] retrieving a list of resources. (getResources) 
   - [ ] adding projects. (addProjects)
-  - [ ] retrieving a list of projects. (getProjects)
+  - [x] retrieving a list of projects. (getProjects)
   - [ ] adding tasks.(addTasks)
   - [ ] retrieving a list of tasks. (getTasks) 
         **The list of tasks should include the project name and project description**.
