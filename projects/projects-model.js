@@ -4,10 +4,10 @@ module.exports = {
   findProjects,
   findResources,
   findTasks,
-  addProjects,
-  addResources,
-  addTasks,
-  findProjectById
+  addProjects, //add to project list
+  addResources,//add to resources list
+  addTasks, //add to tasks list
+  findProjectById //to be able to add tasks and resources to project
 }
 
 //GET list of Projects
@@ -44,5 +44,7 @@ function addResources(resource){
 
 //ADD Tasks
 function addTasks(task){
-  return db('tasks').insert({...task})
+  return db('tasks')
+  .join('projects')
+  .insert({...task})
 };

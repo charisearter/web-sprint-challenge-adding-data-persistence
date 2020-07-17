@@ -47,7 +47,7 @@ router.get('/tasks', (req, res) => {
 });
 module.exports = router;
 
-//POST projects
+//POST projects list
 router.post('/', (req,res) => {
   const projectData = req.body;
 
@@ -63,7 +63,7 @@ router.post('/', (req,res) => {
   });
 });
 
-//POST resources
+//POST resources lists
 router.post('/resources', (req,res) => {
   const resourceData = req.body;
 
@@ -79,11 +79,14 @@ router.post('/resources', (req,res) => {
   });
 });
 
-//POST tasks
-router.post('/tasks', (req,res) => {
+//Post resources to project
+
+//POST tasks lists
+router.post('/tasks', validateTask, (req,res) => {
   const taskData = req.body;
 
   Projects.addTasks(taskData)
+
   .then(task => {
     res.status(201).json(task)
   })
@@ -95,3 +98,14 @@ router.post('/tasks', (req,res) => {
   });
 });
 
+
+//Post tasks to project
+
+
+function validateTask(req, res, next) {
+  const body = req.body;
+
+  !body ? res.status(400).json({ message: "Missing description" }):
+
+  next();
+}

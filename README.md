@@ -78,17 +78,17 @@ Your finished project must include all of the following requirements:
 
    \\Can check when testing POST and GET REQUESTS \\
   - [ ] the same `resource` can be used in multiple `projects`.
-  - [ ] when adding `projects` the client must provide a name, the description is optional.
-  - [ ] when adding `resources` the client must provide a name, the description is optional.
-  - [ ] when adding a `task` the client must provide a description, the notes are optional.
-  - [ ] when adding a `task` the client must provide the `id` of an existing project.
-  - [ ] for `projects` and `tasks` if no value is provided for the `completed` property, the API should provide a default value of `false`.
+  - [x] when adding `projects` the client must provide a name, the description is optional.
+  - [x] when adding `resources` the client must provide a name, the description is optional.
+  - [x] when adding a `task` the client must provide a description, the notes are optional.
+  - [x] when adding a `task` the client must provide the `id` of an existing project.
+  - [x] for `projects` and `tasks` if no value is provided for the `completed` property, the API should provide a default value of `false`.
 - [ ] Build an API with endpoints for:
   - [x] adding resources. (addResources)
   - [x] retrieving a list of resources. (getResources) 
   - [x] adding projects. (addProjects)
   - [x] retrieving a list of projects. (getProjects)
-  - [ ] adding tasks.(addTasks)
+  - [x] adding tasks.(addTasks)
   - [x] retrieving a list of tasks. (getTasks) 
         **The list of tasks should include the project name and project description**.
 
