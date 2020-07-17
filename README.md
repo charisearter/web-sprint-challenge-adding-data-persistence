@@ -84,7 +84,7 @@ Your finished project must include all of the following requirements:
   - [ ] when adding a `task` the client must provide the `id` of an existing project.
   - [ ] for `projects` and `tasks` if no value is provided for the `completed` property, the API should provide a default value of `false`.
 - [ ] Build an API with endpoints for:
-  - [ ] adding resources. (addResources)
+  - [x] adding resources. (addResources)
   - [x] retrieving a list of resources. (getResources) 
   - [x] adding projects. (addProjects)
   - [x] retrieving a list of projects. (getProjects)
