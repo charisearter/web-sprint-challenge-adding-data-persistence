@@ -86,7 +86,7 @@ Your finished project must include all of the following requirements:
 - [ ] Build an API with endpoints for:
   - [ ] adding resources. (addResources)
   - [x] retrieving a list of resources. (getResources) 
-  - [ ] adding projects. (addProjects)
+  - [x] adding projects. (addProjects)
   - [x] retrieving a list of projects. (getProjects)
   - [ ] adding tasks.(addTasks)
   - [x] retrieving a list of tasks. (getTasks) 
