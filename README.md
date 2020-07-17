@@ -82,12 +82,13 @@ Your finished project must include all of the following requirements:
   - [ ] when adding a `task` the client must provide the `id` of an existing project.
   - [ ] for `projects` and `tasks` if no value is provided for the `completed` property, the API should provide a default value of `false`.
 - [ ] Build an API with endpoints for:
-  - [ ] adding resources.
-  - [ ] retrieving a list of resources.
-  - [ ] adding projects.
-  - [ ] retrieving a list of projects.
-  - [ ] adding tasks.
-  - [ ] retrieving a list of tasks. **The list of tasks should include the project name and project description**.
+  - [ ] adding resources. (addResources)
+  - [ ] retrieving a list of resources. (getResources) 
+  - [ ] adding projects. (addProjects)
+  - [ ] retrieving a list of projects. (getProjects)
+  - [ ] adding tasks.(addTasks)
+  - [ ] retrieving a list of tasks. (getTasks) 
+        **The list of tasks should include the project name and project description**.
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
