@@ -45,7 +45,28 @@ router.get('/tasks', (req, res) => {
     });
   });
 });
-module.exports = router;
+
+//GET tasks project id
+router.get(':id/tasks', (req, res) => {
+  const { id } = req.params;
+
+  Projects.findTasks(id)
+  .then(task => {
+    if (task.length) {
+      res.json(task);
+    } else {
+      res.status(404).json({ message: 'Could not find tasks for this project' })
+    }
+  })
+  .catch(err => {
+    res.status(500).json({ 
+      message: 'Failed to get tasks',
+    error: err.message
+    });
+  });
+});
+
+
 
 //POST projects list
 router.post('/', (req,res) => {
@@ -109,3 +130,4 @@ function validateTask(req, res, next) {
 
   next();
 }
+module.exports = router;

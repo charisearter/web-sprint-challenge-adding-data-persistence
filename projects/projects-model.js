@@ -31,6 +31,14 @@ function findTasks() {
   return db("tasks")
 };
 
+//GET steps DONE
+function findTasks(id) {
+  return db("projects")
+  .join("tasks", "projects.id", "tasks.project_id")
+  .select("projects.project_name", "tasks.id", "projects.description" )
+  .where({ project_id: id })
+};
+
 //ADD Projects
 function addProjects(project){
   return db('projects').insert({...project})
