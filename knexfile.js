@@ -10,10 +10,12 @@ module.exports = {
       filename: './data/projects.db3', 
     },
     migrations: { 
+      //addition option to specify directory for migrations
       //migrations directory will make on its own if not there
       directory: './data/migrations'
     },
     seeds: { 
+      //addition option to specify directory for seeds
       //seed directory will make on its own if not there
       directory: './data/seeds'
     },
