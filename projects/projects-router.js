@@ -18,4 +18,32 @@ router.get('/', (req, res) => {
   });
 });
 
+//GET resources
+router.get('/resources', (req, res) => {
+  Projects.findResources()
+  .then(resources => {
+    res.json(resources);
+  })
+  .catch(err => {
+    res.status(500).json({ 
+      message: 'Failed to get resources',
+    error: err.message
+    });
+  });
+});
+
+//GET tasks
+router.get('/tasks', (req, res) => {
+  Projects.findTasks()
+  .then(tasks => {
+    res.json(tasks);
+  })
+  .catch(err => {
+    res.status(500).json({ 
+      message: 'Failed to get tasks',
+    error: err.message
+    });
+  });
+});
 module.exports = router;
+
